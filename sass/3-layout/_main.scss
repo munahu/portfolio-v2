@@ -1,12 +1,13 @@
 main {
+
     position: relative;
     
     .featured-work-circle {
         position: absolute;
-        top: -5em;
-        left: 50%;
+        top: -2.5em;
+        left: 46%;
         transform: translate(-50%, 50%);
-        width: 80px;
-        height: 80px;
+        width: 90px;
+        height: 90px;
     }
 }

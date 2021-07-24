@@ -1,3 +1,30 @@
+.featured-work-circle {
+  -webkit-animation: rotate 10s 2s linear infinite;
+          animation: rotate 10s 2s linear infinite;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 body,
 ul,
 h1,
@@ -89,12 +116,16 @@ header .scroll::before {
   height: 70px;
   width: 1px;
   background: black;
+  -webkit-box-shadow: 1px 1px rgba(114, 0, 34, 0.39);
+          box-shadow: 1px 1px rgba(114, 0, 34, 0.39);
 }
 
 header .scroll__arrow {
   margin-top: -12px;
   border: solid black;
   border-width: 0 1px 1px 0;
+  -webkit-box-shadow: 1px 1px rgba(114, 0, 34, 0.39);
+          box-shadow: 1px 1px rgba(114, 0, 34, 0.39);
   display: inline-block;
   padding: 5px;
   -webkit-transform: rotate(45deg);
@@ -107,12 +138,12 @@ main {
 
 main .featured-work-circle {
   position: absolute;
-  top: -5em;
-  left: 50%;
+  top: -2.5em;
+  left: 46%;
   -webkit-transform: translate(-50%, 50%);
           transform: translate(-50%, 50%);
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
 }
 
 .greeting {
@@ -308,10 +339,12 @@ nav ul li a:hover {
 
 .work__project__img-container__links a {
   font-family: "Satoshi", sans-serif;
-  color: black;
+  color: #720022;
+  text-shadow: 2px 2px rgba(58, 0, 17, 0.171);
+  -webkit-text-decoration: 1px underline solid #720022;
+          text-decoration: 1px underline solid #720022;
   font-weight: bold;
   text-transform: uppercase;
-  border-bottom: 2px solid black;
 }
 
 .work__project__img-container__links a:nth-of-type(1) {
@@ -323,7 +356,7 @@ nav ul li a:hover {
 }
 
 .contact {
-  background: #cbd4d4;
+  background: #e2e6e6;
   height: 100vh;
 }
 
@@ -358,8 +391,38 @@ nav ul li a:hover {
 }
 
 .contact__message a {
-  color: black;
-  -webkit-text-decoration: underline solid black;
-          text-decoration: underline solid black;
+  color: #720022;
+  text-shadow: 2px 2px rgba(58, 0, 17, 0.171);
+  -webkit-text-decoration: 1px underline solid #720022;
+          text-decoration: 1px underline solid #720022;
+}
+
+.contact .links {
+  position: absolute;
+  bottom: 5em;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact .links a {
+  margin: 1px 0;
+  font-family: "Satoshi", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  color: #720022;
+  text-shadow: 2px 2px rgba(58, 0, 17, 0.171);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.contact .links a:hover {
+  -webkit-text-decoration: line-through 1px;
+          text-decoration: line-through 1px;
 }
 /*# sourceMappingURL=main.css.map */
