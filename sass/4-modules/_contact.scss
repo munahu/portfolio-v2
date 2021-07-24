@@ -1,0 +1,31 @@
+.contact {
+    background: #cbd4d4;
+    height: 100vh;
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__heading {
+        text-shadow: 3px 3px rgba(58, 0, 17, 0.171);
+        font-family: $headingFont;
+        font-size: 6rem;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    &__message {
+        font-family: $bodyFont;
+        font-size: 1.4rem;
+        font-weight: 300;
+
+        a {
+            color: black;
+            text-decoration: underline solid black;
+        }
+    
+    }
+}

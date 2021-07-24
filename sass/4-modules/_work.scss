@@ -1,11 +1,11 @@
 .work {
-    
+
     .project1 {
         background: #e3dacd;  
     }
 
     &__project {
-        height: 100%;
+        height: 100vh;
 
         .wrapper {
             display: flex;
@@ -20,7 +20,7 @@
             
             &__title {
                 text-shadow: 3px 3px rgba(58, 0, 17, 0.171);
-
+                font-weight: 500;
                 font-family: $headingFont;
                 text-transform: uppercase;
                 font-size: 6.3rem;
@@ -29,12 +29,12 @@
 
             &__description {
                 font-size: 1.2rem;
-                margin-left: 2em;
                 width: 70%;
                 letter-spacing: 0.2px;
                 line-height: 1.5em;
                 font-weight: 300;
             }
+            
 
             &__description,
             &__stack {
@@ -42,27 +42,30 @@
             }
 
             &__stack {
-                margin: 2em 0;
-                text-transform: uppercase;
-                font-size: 0.9rem;
-                font-weight: bold;
-
+                margin-top: 1.5em;
+                margin-bottom: 4em;
+                
                 span {
-                    padding-left: 0.5em;
-                    padding-right: 0.5em;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    font-size: 0.85rem;
                     letter-spacing: 0.5px;
+                    padding: 0 0.5em;
                     border-right: 1px solid black;
-                text-shadow: 1px 1px rgba(58, 0, 17, 0.171);
+                }
 
+                span:nth-of-type(1) {
+                    padding-left: 0;
                 }
             }
-        }
 
+        }
+        
         &__img-container {
             cursor: pointer;
             width: 50%;
             position: relative;
-
+            
             &::before {
                 content: '';
                 background: #857f7725;
@@ -71,13 +74,34 @@
                 width: 100%;
                 height: 100%;
             }
-
+            
+            
             img {
                 width: 100%;
             }
+
+            &__links  {
+                margin: 1em 0;
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, 50%);
+                
+                
+                a {
+                    font-family: $bodyFont;
+                    color: black;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    border-bottom: 2px solid black;
+                }
+
+                a:nth-of-type(1) {
+                    margin-right: 1.5em;
+                } 
+            }
         }
     }
-
+    
     .project2 {
         background: #f3eee8;
     }

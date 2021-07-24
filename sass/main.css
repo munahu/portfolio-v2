@@ -115,10 +115,6 @@ main .featured-work-circle {
   height: 80px;
 }
 
-main section {
-  height: 100vh;
-}
-
 .greeting {
   padding-top: 1em;
   height: calc(100% - 1em);
@@ -218,7 +214,7 @@ nav ul li a:hover {
 }
 
 .work__project {
-  height: 100%;
+  height: 100vh;
 }
 
 .work__project .wrapper {
@@ -246,6 +242,7 @@ nav ul li a:hover {
 
 .work__project__text__title {
   text-shadow: 3px 3px rgba(58, 0, 17, 0.171);
+  font-weight: 500;
   font-family: "Boska", serif;
   text-transform: uppercase;
   font-size: 6.3rem;
@@ -253,7 +250,6 @@ nav ul li a:hover {
 
 .work__project__text__description {
   font-size: 1.2rem;
-  margin-left: 2em;
   width: 70%;
   letter-spacing: 0.2px;
   line-height: 1.5em;
@@ -265,18 +261,21 @@ nav ul li a:hover {
 }
 
 .work__project__text__stack {
-  margin: 2em 0;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  font-weight: bold;
+  margin-top: 1.5em;
+  margin-bottom: 4em;
 }
 
 .work__project__text__stack span {
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.85rem;
   letter-spacing: 0.5px;
+  padding: 0 0.5em;
   border-right: 1px solid black;
-  text-shadow: 1px 1px rgba(58, 0, 17, 0.171);
+}
+
+.work__project__text__stack span:nth-of-type(1) {
+  padding-left: 0;
 }
 
 .work__project__img-container {
@@ -299,7 +298,68 @@ nav ul li a:hover {
   width: 100%;
 }
 
+.work__project__img-container__links {
+  margin: 1em 0;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+}
+
+.work__project__img-container__links a {
+  font-family: "Satoshi", sans-serif;
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 2px solid black;
+}
+
+.work__project__img-container__links a:nth-of-type(1) {
+  margin-right: 1.5em;
+}
+
 .work .project2 {
   background: #f3eee8;
+}
+
+.contact {
+  background: #cbd4d4;
+  height: 100vh;
+}
+
+.contact .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact__heading {
+  text-shadow: 3px 3px rgba(58, 0, 17, 0.171);
+  font-family: "Boska", serif;
+  font-size: 6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.contact__message {
+  font-family: "Satoshi", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.contact__message a {
+  color: black;
+  -webkit-text-decoration: underline solid black;
+          text-decoration: underline solid black;
 }
 /*# sourceMappingURL=main.css.map */
