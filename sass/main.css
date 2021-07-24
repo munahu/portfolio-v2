@@ -213,12 +213,15 @@ nav ul li a:hover {
           text-decoration: line-through 3px #720022;
 }
 
-.work {
+.work .project1 {
   background: #e3dacd;
 }
 
 .work__project {
   height: 100%;
+}
+
+.work__project .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -294,5 +297,9 @@ nav ul li a:hover {
 
 .work__project__img-container img {
   width: 100%;
+}
+
+.work .project2 {
+  background: #f3eee8;
 }
 /*# sourceMappingURL=main.css.map */

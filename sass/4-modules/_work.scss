@@ -1,11 +1,17 @@
 .work {
-    background: #e3dacd;
     
+    .project1 {
+        background: #e3dacd;  
+    }
+
     &__project {
         height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+
+        .wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
         &__text {
             width: 50%;
@@ -70,6 +76,10 @@
                 width: 100%;
             }
         }
+    }
+
+    .project2 {
+        background: #f3eee8;
     }
 }
 
