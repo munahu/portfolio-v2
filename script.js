@@ -4,6 +4,10 @@ app.toggleNav = () => {
     $('.nav-icons').click(() => {
         $('.nav-list').toggleClass('hidden');
     })
+
+    $('.nav-links').click(() => {
+        $('.nav-list').toggleClass('hidden');
+    })
 }
 
 app.init = () => {

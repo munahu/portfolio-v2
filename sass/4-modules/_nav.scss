@@ -1,17 +1,16 @@
 nav {
-    // border: 2px solid red;
     font-family: $headingFont;
     display: flex;
 
     .nav-icons {
+        cursor: pointer;
         position: absolute;
         top: 3em;
-        right: 5em;
+        right: 0;
         width: 40px;
     }
 
     ul {
-        // border: 2px solid blue;
         position: relative;
         position: absolute;
         display: flex;

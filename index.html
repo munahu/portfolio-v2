@@ -9,15 +9,15 @@
     <title>Muna Hussen</title>
 </head>
 <body>
-    <div class="container">
-        <header>
+    <header>
+        <div class="wrapper">
             <nav>
                 <img src="./sass/1-helpers/assets/menu-icon.png" alt="menu" class="nav-icons">
                 <ul class="nav-list hidden">
                     <img src="./sass/1-helpers/assets/close-icon.png" alt="close" class="nav-icons">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#work">Work</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li class="nav-links"><a href="#about">About</a></li>
+                    <li class="nav-links"><a href="#work">Work</a></li>
+                    <li class="nav-links"><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
             <div class="greeting">
@@ -38,13 +38,44 @@
             <div class="scroll">
                 <div class="scroll__arrow"></div>
             </div>
-        </header>
-        <main>
-            <section class="about">
-                <h2>About</h2>
-            </section>
-        </main>
-    </div>
+        </div>
+    </header>
+    <main>
+        <img src="./sass/1-helpers/assets/featured-work.png" alt="" class="featured-work-circle">
+        <section class="work" id="work">
+            <div class="wrapper">
+                <div class="work__project">
+                    <div class="work__project__text">
+                        <span class="work__project__text__title">Movies</span>
+                        <span class="work__project__text__description">Made for movie lovers. Get info on various movies and even recommendations with this responsive web app.</span>
+                        <span class="work__project__text__stack">
+                            <span>The Movie DB API</span>
+                            <span>React</span>
+                            <span>React Router</span>
+                        </span>
+                    </div>
+                    <div class="work__project__img-container">
+                        <img src="./sass/1-helpers/assets/movie-app.png" alt="">
+                    </div>
+                </div>
+
+                <div class="work__project">
+                    <div class="work__project__text">
+                        <span class="work__project__text__title">News</span>
+                        <span class="work__project__text__description">This responsive web app allows you to stay up-to-date with news with top stories.</span>
+                        <span class="work__project__text__stack">
+                            <span>GNews API</span>
+                            <span>React</span>
+                            <span>React Router</span>
+                        </span>
+                    </div>
+                    <div class="work__project__img-container">
+                        <img src="./sass/1-helpers/assets/news-app.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./script.js"></script>
 </body>
