@@ -9,19 +9,35 @@
 
     &__name {
         font-family: $headingFont;
-        
-        h1 {
+        display: flex;
+
+        &__first-name,
+        &__last-name {
+            font-size: 0;
+
             span {
-                margin-right: 0.15em;
                 text-shadow: 2px 2px rgba(58, 0, 17, 0.171);
-                font-size: 6.7rem;
-                font-style: italic;
+                font-size: 7.4rem;
                 font-weight: 500;
                 color: rgb(49, 47, 61);
             }
         }
 
+        &__first-name {
+            span:nth-of-type(4) {
+                margin-right: 0.20em;
+            }
+        }
+
+       &__last-name {
+            span:nth-of-type(6) {
+                font-style: italic;
+            }
+        }
     }
+
+        
+       
 
     &__title {
         font-family: $bodyFont;
@@ -30,5 +46,34 @@
             font-size: 1.8rem;
             font-weight: 300;
         }
+    }
+}
+
+@media(max-width: 816px) {
+    .greeting {
+        height: 75%;
+
+        &__name {
+            
+        &__first-name,
+        &__last-name {
+
+            span {
+                font-size: 14vw;
+            }
+        }
+
+       &__last-name {
+            span:nth-of-type(6) {
+                font-style: italic;
+            }
+        }
+    }
+
+    &__title {
+        h2 {
+            font-size: 6vw;
+        }
+    }
     }
 }

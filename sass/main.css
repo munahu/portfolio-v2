@@ -1,6 +1,6 @@
 .featured-work-circle {
-  -webkit-animation: rotate 10s 2s linear infinite;
-          animation: rotate 10s 2s linear infinite;
+  -webkit-animation: rotate 10s linear infinite;
+          animation: rotate 10s linear infinite;
 }
 
 @-webkit-keyframes rotate {
@@ -25,6 +25,29 @@
   }
 }
 
+.scroll__arrow {
+  -webkit-animation: bounce 0.6s linear infinite alternate;
+          animation: bounce 0.6s linear infinite alternate;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    bottom: -10px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    bottom: -10px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
 body,
 ul,
 h1,
@@ -46,6 +69,11 @@ li {
 
 .hidden {
   display: none;
+}
+
+.lock {
+  height: 100%;
+  overflow: hidden;
 }
 
 header {
@@ -112,24 +140,25 @@ header .scroll {
 header .scroll::before {
   border-radius: 30px;
   content: '';
-  display: block;
-  height: 70px;
+  display: inline-block;
+  height: 60px;
   width: 1px;
   background: black;
-  -webkit-box-shadow: 1px 1px rgba(114, 0, 34, 0.39);
-          box-shadow: 1px 1px rgba(114, 0, 34, 0.39);
 }
 
 header .scroll__arrow {
-  margin-top: -12px;
+  position: absolute;
+  bottom: -10px;
   border: solid black;
   border-width: 0 1px 1px 0;
-  -webkit-box-shadow: 1px 1px rgba(114, 0, 34, 0.39);
-          box-shadow: 1px 1px rgba(114, 0, 34, 0.39);
   display: inline-block;
   padding: 5px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+
+header .scroll.hidden {
+  display: none;
 }
 
 main {
@@ -167,15 +196,28 @@ main .featured-work-circle {
 
 .greeting__name {
   font-family: "Boska", serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.greeting__name h1 span {
-  margin-right: 0.15em;
+.greeting__name__first-name, .greeting__name__last-name {
+  font-size: 0;
+}
+
+.greeting__name__first-name span, .greeting__name__last-name span {
   text-shadow: 2px 2px rgba(58, 0, 17, 0.171);
-  font-size: 6.7rem;
-  font-style: italic;
+  font-size: 7.4rem;
   font-weight: 500;
   color: #312f3d;
+}
+
+.greeting__name__first-name span:nth-of-type(4) {
+  margin-right: 0.20em;
+}
+
+.greeting__name__last-name span:nth-of-type(6) {
+  font-style: italic;
 }
 
 .greeting__title {
@@ -185,6 +227,21 @@ main .featured-work-circle {
 .greeting__title h2 {
   font-size: 1.8rem;
   font-weight: 300;
+}
+
+@media (max-width: 816px) {
+  .greeting {
+    height: 75%;
+  }
+  .greeting__name__first-name span, .greeting__name__last-name span {
+    font-size: 14vw;
+  }
+  .greeting__name__last-name span:nth-of-type(6) {
+    font-style: italic;
+  }
+  .greeting__title h2 {
+    font-size: 6vw;
+  }
 }
 
 nav {
@@ -316,13 +373,17 @@ nav ul li a:hover {
 }
 
 .work__project__img-container::before {
-  content: '';
   background: #857f7725;
   -webkit-box-shadow: 0 5px 10px #797979;
           box-shadow: 0 5px 10px #797979;
+  content: '';
   position: absolute;
   width: 100%;
   height: 100%;
+}
+
+.work__project__img-container:hover::before {
+  position: relative;
 }
 
 .work__project__img-container img {
@@ -356,7 +417,7 @@ nav ul li a:hover {
 }
 
 .contact {
-  background: #e2e6e6;
+  background: #f7f7f7;
   height: 100vh;
 }
 
