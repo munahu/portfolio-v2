@@ -13,14 +13,16 @@ app.animations = () => {
 
 app.toggleNav = () => {
     $('.nav-icons').click(() => {
-        $('.nav-list').toggleClass('hidden');
+        $('nav').toggleClass('hidden');
+        $('.menu-icon').toggleClass('hidden');
         $('body').toggleClass('lock');
         $('.featured-work-circle').toggleClass('hidden');
         $('.scroll').toggleClass('hidden');
     })
 
     $('.nav-links').click(() => {
-        $('.nav-list').toggleClass('hidden');
+        $('nav').toggleClass('hidden');
+        $('.menu-icon').toggleClass('hidden');
         $('body').toggleClass('lock');
         $('.featured-work-circle').toggleClass('hidden');
         $('.scroll').toggleClass('hidden');

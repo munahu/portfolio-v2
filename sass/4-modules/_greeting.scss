@@ -36,9 +36,6 @@
         }
     }
 
-        
-       
-
     &__title {
         font-family: $bodyFont;
 
@@ -54,7 +51,7 @@
         height: 75%;
 
         &__name {
-            
+
         &__first-name,
         &__last-name {
 
@@ -70,10 +67,10 @@
         }
     }
 
-    &__title {
-        h2 {
-            font-size: 6vw;
+        &__title {
+            h2 {
+                font-size: 6vw;
+            }
         }
-    }
     }
 }

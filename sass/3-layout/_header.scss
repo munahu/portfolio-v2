@@ -59,3 +59,13 @@ header {
         display: none;
     }
 }
+
+@media(max-width: 816px) {
+    .links {
+        top: 67%;
+    }
+
+    .scroll {
+        visibility: hidden;
+    }
+}
