@@ -328,24 +328,11 @@ nav .nav-list .nav-links a:hover {
   background: #e3dacd;
 }
 
-.work__project {
-  height: 100vh;
-}
-
 .work__project .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  padding: 0.5em 0;
 }
 
 .work__project__text {
-  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -360,15 +347,15 @@ nav .nav-list .nav-links a:hover {
   font-weight: 500;
   font-family: "Boska", serif;
   text-transform: uppercase;
-  font-size: 6.3rem;
+  font-size: 12vw;
 }
 
 .work__project__text__description {
-  font-size: 1.2rem;
-  width: 70%;
   letter-spacing: 0.2px;
   line-height: 1.5em;
   font-weight: 300;
+  font-size: 6vw;
+  margin: 0.5em 0;
 }
 
 .work__project__text__description, .work__project__text__stack {
@@ -376,16 +363,14 @@ nav .nav-list .nav-links a:hover {
 }
 
 .work__project__text__stack {
-  margin-top: 1.5em;
-  margin-bottom: 4em;
+  font-size: 4vw;
 }
 
 .work__project__text__stack span {
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 0.85rem;
   letter-spacing: 0.5px;
-  padding: 0 0.5em;
+  padding: 0 0.3em;
   border-right: 1px solid black;
 }
 
@@ -394,9 +379,10 @@ nav .nav-list .nav-links a:hover {
 }
 
 .work__project__img-container {
-  cursor: pointer;
-  width: 50%;
   position: relative;
+  cursor: pointer;
+  width: 100%;
+  margin: 1em 0;
 }
 
 .work__project__img-container::before {
@@ -418,11 +404,12 @@ nav .nav-list .nav-links a:hover {
 }
 
 .work__project__img-container__links {
-  margin: 1em 0;
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translate(-50%, 50%);
-          transform: translate(-50%, 50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .work__project__img-container__links a {
@@ -441,6 +428,75 @@ nav .nav-list .nav-links a:hover {
 
 .work .project2 {
   background: #f3eee8;
+}
+
+@media (min-width: 924px) {
+  .work__project {
+    border: 2px solid blue;
+  }
+  .work__project .wrapper {
+    padding: 5em 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .work__project__text {
+    width: 50%;
+    position: relative;
+  }
+  .work__project__text__title {
+    font-size: 6rem;
+  }
+  .work__project__text__description {
+    font-size: 1.2rem;
+    width: 85%;
+  }
+  .work__project__text__stack {
+    margin: 0.8em 0;
+    font-size: 0.9rem;
+  }
+  .work__project__img-container {
+    width: 50%;
+    position: relative;
+  }
+  .work__project__img-container__links {
+    margin: 1em 0;
+    position: absolute;
+    padding: 0.5em 0;
+    width: 100%;
+  }
+  .work__project__img-container__links a {
+    font-size: 1rem;
+    color: black;
+  }
+}
+
+@media (max-width: 923px) {
+  .work__project .wrapper {
+    padding: 5em 0;
+  }
+  .work__project__text {
+    position: relative;
+  }
+  .work__project__text__description {
+    font-size: 1.2rem;
+  }
+  .work__project__text__stack {
+    margin: 0.8em 0;
+    font-size: 1rem;
+  }
+  .work__project__img-container {
+    position: relative;
+  }
+  .work__project__img-container__links {
+    position: absolute;
+    padding: 1.3em 0;
+    width: 100%;
+  }
+  .work__project__img-container__links a {
+    font-size: 1rem;
+    color: black;
+  }
 }
 
 .contact {

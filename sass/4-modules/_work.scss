@@ -1,3 +1,4 @@
+
 .work {
 
     .project1 {
@@ -5,34 +6,28 @@
     }
 
     &__project {
-        height: 100vh;
 
         .wrapper {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            padding: 0.5em 0;
         }
 
         &__text {
-            width: 50%;
             display: flex;
             flex-direction: column;
-            
             &__title {
                 text-shadow: 3px 3px rgba(58, 0, 17, 0.171);
                 font-weight: 500;
                 font-family: $headingFont;
                 text-transform: uppercase;
-                font-size: 6.3rem;
-
+                font-size: 12vw;
             }
 
             &__description {
-                font-size: 1.2rem;
-                width: 70%;
                 letter-spacing: 0.2px;
                 line-height: 1.5em;
                 font-weight: 300;
+                font-size: 6vw;
+                margin: 0.5em 0;
             }
             
 
@@ -42,15 +37,12 @@
             }
 
             &__stack {
-                margin-top: 1.5em;
-                margin-bottom: 4em;
-                
+                font-size: 4vw;
                 span {
                     text-transform: uppercase;
                     font-weight: 600;
-                    font-size: 0.85rem;
                     letter-spacing: 0.5px;
-                    padding: 0 0.5em;
+                    padding: 0 0.3em;
                     border-right: 1px solid black;
                 }
 
@@ -62,9 +54,10 @@
         }
         
         &__img-container {
-            cursor: pointer;
-            width: 50%;
             position: relative;
+            cursor: pointer;
+            width: 100%;
+            margin: 1em 0;
 
             
             &::before {
@@ -84,15 +77,12 @@
 
             img {
                 width: 100%;
+               
             }
 
             &__links  {
-                margin: 1em 0;
-                position: absolute;
-                left: 50%;
-                transform: translate(-50%, 50%);
-                
-                
+                display: flex;
+                justify-content: center;
                 a {
                     font-family: $bodyFont;
                     color: rgb(114, 0, 34);
@@ -114,4 +104,90 @@
     }
 }
 
+@media(min-width: 924px) {
+    .work {
 
+        &__project {
+            border: 2px solid blue;
+            .wrapper {
+                padding: 5em 0;
+                display: flex;
+            }
+
+            &__text {
+                width: 50%;
+                position: relative;
+
+                &__title {
+                    font-size: 6rem;
+                }
+
+                &__description {
+                    font-size: 1.2rem;
+                    width: 85%;
+                }
+
+                &__stack {
+                    margin: 0.8em 0;
+                    font-size: 0.9rem
+                }
+            }
+
+            &__img-container {
+                width: 50%;
+                position: relative;
+
+                &__links {
+                    margin: 1em 0;
+                    position: absolute;
+                    padding: 0.5em 0;
+                    width: 100%;
+                    
+                    a {
+                        font-size: 1rem;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 923px) {
+
+    .work {
+
+        &__project {
+
+            .wrapper {
+                padding: 5em 0;
+            }
+
+            &__text {
+                position: relative;
+                &__description {
+                    font-size: 1.2rem;
+                }
+
+                &__stack {
+                    margin: 0.8em 0;
+                    font-size: 1rem;
+                }
+            }
+
+            &__img-container {
+                position: relative;
+                &__links {
+                    position: absolute;
+                    padding: 1.3em 0;
+                    width: 100%;
+                    
+                    a {
+                        font-size: 1rem;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}
