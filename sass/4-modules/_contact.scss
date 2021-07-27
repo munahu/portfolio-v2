@@ -1,7 +1,7 @@
 .contact {
     background: #f7f7f7;
     height: 100vh;
-
+    
     .wrapper {
         display: flex;
         flex-direction: column;
@@ -21,6 +21,7 @@
         font-family: $bodyFont;
         font-size: 1.4rem;
         font-weight: 300;
+        width: 80%;
 
         a {
             color: rgb(114, 0, 34);
@@ -50,6 +51,22 @@
                 text-decoration: line-through 1px;
 
             }
+        }
+    }
+}
+
+
+@media(max-width: 983px) {
+    .contact {
+
+        &__heading {
+            font-size: 12vw;
+        }
+
+        &__message {
+            font-size: 1.2rem;
+            width: 85%;
+            text-align: center;
         }
     }
 }

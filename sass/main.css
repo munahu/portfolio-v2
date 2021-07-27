@@ -174,12 +174,19 @@ main {
   position: relative;
 }
 
-main .featured-work-circle {
+main .circle-container {
   position: absolute;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   top: -2.5em;
-  left: 46%;
-  -webkit-transform: translate(-50%, 50%);
-          transform: translate(-50%, 50%);
+}
+
+main .featured-work-circle {
   width: 90px;
   height: 90px;
 }
@@ -347,23 +354,18 @@ nav .nav-list .nav-links a:hover {
   font-weight: 500;
   font-family: "Boska", serif;
   text-transform: uppercase;
-  font-size: 12vw;
 }
 
 .work__project__text__description {
+  font-size: 1.2rem;
   letter-spacing: 0.2px;
   line-height: 1.5em;
   font-weight: 300;
-  font-size: 6vw;
   margin: 0.5em 0;
 }
 
 .work__project__text__description, .work__project__text__stack {
   font-family: "Satoshi", sans-serif;
-}
-
-.work__project__text__stack {
-  font-size: 4vw;
 }
 
 .work__project__text__stack span {
@@ -431,9 +433,6 @@ nav .nav-list .nav-links a:hover {
 }
 
 @media (min-width: 924px) {
-  .work__project {
-    border: 2px solid blue;
-  }
   .work__project .wrapper {
     padding: 5em 0;
     display: -webkit-box;
@@ -448,7 +447,6 @@ nav .nav-list .nav-links a:hover {
     font-size: 6rem;
   }
   .work__project__text__description {
-    font-size: 1.2rem;
     width: 85%;
   }
   .work__project__text__stack {
@@ -478,8 +476,8 @@ nav .nav-list .nav-links a:hover {
   .work__project__text {
     position: relative;
   }
-  .work__project__text__description {
-    font-size: 1.2rem;
+  .work__project__text__title {
+    font-size: 12vw;
   }
   .work__project__text__stack {
     margin: 0.8em 0;
@@ -532,6 +530,7 @@ nav .nav-list .nav-links a:hover {
   font-family: "Satoshi", sans-serif;
   font-size: 1.4rem;
   font-weight: 300;
+  width: 80%;
 }
 
 .contact__message a {
@@ -568,5 +567,16 @@ nav .nav-list .nav-links a:hover {
 .contact .links a:hover {
   -webkit-text-decoration: line-through 1px;
           text-decoration: line-through 1px;
+}
+
+@media (max-width: 983px) {
+  .contact__heading {
+    font-size: 12vw;
+  }
+  .contact__message {
+    font-size: 1.2rem;
+    width: 85%;
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=main.css.map */
